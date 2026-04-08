@@ -18,9 +18,31 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    try {
+      await fetch(
+        "https://services.leadconnectorhq.com/hooks/skmoLdrcSJ0WVw2FXBqu/webhook-trigger/04868537-e52d-413c-bd82-1c18f037ba11",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          mode: "no-cors",
+          body: JSON.stringify({
+            ...form,
+            smsMarketingOptIn: smsMarketing,
+            smsTransactionalOptIn: smsTransactional,
+          }),
+        }
+      );
+      setSubmitted(true);
+    } catch {
+      setSubmitted(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -297,10 +319,11 @@ export default function ContactPage() {
                   </div>
                   <button
                     type="submit"
-                    className="mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#6366f1] text-white font-semibold rounded-xl hover:bg-[#4f46e5] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-indigo-500/25"
+                    disabled={submitting}
+                    className="mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#6366f1] text-white font-semibold rounded-xl hover:bg-[#4f46e5] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-indigo-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="w-4 h-4" />
-                    Send Request
+                    {submitting ? "Sending..." : "Send Request"}
                   </button>
                 </form>
               )}
