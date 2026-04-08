@@ -7,6 +7,8 @@ import { Phone, Mail, MapPin, Send, CheckCircle2, Clock } from "lucide-react";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [smsMarketing, setSmsMarketing] = useState(false);
+  const [smsTransactional, setSmsTransactional] = useState(false);
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -231,6 +233,31 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#6366f1]/50 focus:border-[#6366f1] transition-all"
                         placeholder="(555) 123-4567"
                       />
+                      {/* SMS Opt-In / Opt-Out for GoHighLevel */}
+                      <div className="mt-3 space-y-3">
+                        <label className="flex items-start gap-3 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={smsMarketing}
+                            onChange={(e) => setSmsMarketing(e.target.checked)}
+                            className="mt-0.5 w-4 h-4 rounded border-gray-600 bg-gray-700 text-[#6366f1] focus:ring-[#6366f1]/50 focus:ring-2 cursor-pointer"
+                          />
+                          <span className="text-sm text-gray-400 leading-snug">
+                            I consent to receive marketing text messages from Domilea.CO at the phone number provided. Up to 4 messages per month. Message &amp; data rates may apply. Reply STOP to unsubscribe. Text HELP for assistance.
+                          </span>
+                        </label>
+                        <label className="flex items-start gap-3 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={smsTransactional}
+                            onChange={(e) => setSmsTransactional(e.target.checked)}
+                            className="mt-0.5 w-4 h-4 rounded border-gray-600 bg-gray-700 text-[#6366f1] focus:ring-[#6366f1]/50 focus:ring-2 cursor-pointer"
+                          />
+                          <span className="text-sm text-gray-400 leading-snug">
+                            I consent to receive non-marketing text messages from Domilea.CO about my order updates, appointment reminders, and other transactional notifications. Up to 4 messages per month. Message &amp; data rates may apply. Reply STOP to unsubscribe. Text HELP for assistance.
+                          </span>
+                        </label>
+                      </div>
                     </div>
                     <div className="sm:col-span-2">
                       <label className="block text-sm font-medium text-gray-400 mb-2">
