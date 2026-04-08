@@ -243,7 +243,7 @@ export default function ContactPage() {
                             className="mt-0.5 w-4 h-4 rounded border-gray-600 bg-gray-700 text-[#6366f1] focus:ring-[#6366f1]/50 focus:ring-2 cursor-pointer"
                           />
                           <span className="text-sm text-gray-400 leading-snug">
-                            I consent to receive marketing text messages from Domilea.CO at the phone number provided. Up to 4 messages per month. Message &amp; data rates may apply. Reply STOP to unsubscribe. Text HELP for assistance.
+                            I consent to receive marketing text messages from Fast Mode LLC at the phone number provided. Up to 4 messages per month. Message &amp; data rates may apply. Reply STOP to unsubscribe. Text HELP for assistance.
                           </span>
                         </label>
                         <label className="flex items-start gap-3 cursor-pointer">
@@ -254,7 +254,7 @@ export default function ContactPage() {
                             className="mt-0.5 w-4 h-4 rounded border-gray-600 bg-gray-700 text-[#6366f1] focus:ring-[#6366f1]/50 focus:ring-2 cursor-pointer"
                           />
                           <span className="text-sm text-gray-400 leading-snug">
-                            I consent to receive non-marketing text messages from Domilea.CO about my order updates, appointment reminders, and other transactional notifications. Up to 4 messages per month. Message &amp; data rates may apply. Reply STOP to unsubscribe. Text HELP for assistance.
+                            I consent to receive non-marketing text messages from Fast Mode LLC about my order updates, appointment reminders, and other transactional notifications. Up to 4 messages per month. Message &amp; data rates may apply. Reply STOP to unsubscribe. Text HELP for assistance.
                           </span>
                         </label>
                       </div>
