@@ -68,8 +68,8 @@ export default function Home() {
       {/* Hero - Dark with background image */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80"
-          alt="Truck driver standing next to semi truck"
+          src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?w=1920&q=80"
+          alt="American semi truck on highway"
           fill
           className="object-cover object-center"
           priority
