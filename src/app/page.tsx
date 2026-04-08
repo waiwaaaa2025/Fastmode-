@@ -68,10 +68,10 @@ export default function Home() {
       {/* Hero - Dark with background image */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1657469067800-65aa03710ef0?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80"
           alt="Truck driver standing next to semi truck"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 overlay-gradient" />
@@ -185,7 +185,7 @@ export default function Home() {
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover object-center group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -226,7 +226,7 @@ export default function Home() {
               src="https://images.unsplash.com/photo-1605705658744-45f0fe8f9663?w=1000&q=80"
               alt="Truck driver"
               fill
-              className="object-cover"
+              className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20 lg:bg-none" />
           </div>
@@ -307,7 +307,7 @@ export default function Home() {
           src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1920&q=80"
           alt="Highway at sunset"
           fill
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/70" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
